@@ -1,2 +1,10 @@
 # Data-Collection
-Module 11-Scraping
+Web Scraping
+Deliverable 1: 
+To extract the text elements I had to first find the tag associated with the text element. I found the tag by inspecting the website and hovering the cursor over the websites text. All the text elements were found within the "div class=list_text" tag. I then had to drill in further to find the tags associated with the title and preview text. I called a for loop to grab the tags from the "div class=list_text" element. Once grabbed I placed the text within a dictionary and then a list.
+
+
+Deliverable 2:
+I encountered a few challenges when extracting a table. The entire table was within a "tr" tag. The headers were inside the 'tr' and 'th' tag. The values, or data, was inside the 'tr' and 'td' tag. I was not undertanding what I was to do with the "tr class='data-row'" that was found in between each new row. I was able to loop through the header, but once I reached the values it returned an error. After a full day of trying different approaches I finally contacted BCS to recieve guidance. Sathwik explained the appropriate approach to the problem I was facing- I am very grateful. He explained to me how the tag I suspected to be a nuisance was actually the tag I needed to draw closer to the data I wanted to retrieve. We created a rows variable with that tag. and used a for loop to drill inside the code, and another for loop to created list of each row. I went on to create a pd of the elements. I ran some analysis on the code, found the data types, and used pyplot to graph. I did encounter a small hiccup on the last graph until I realized that the index equaled the values under the terrestrial_date 1:1 so I could set the x to be the index. I could have created a new dataframe with two columns and then set the terrestrial_date as the index and plot that dataframe. I used the this logic with the use_index shortcut. The following link was the resource I referenced when using the index as the x-axis in the graph. 
+
+https://www.statology.org/pandas-plot-index/ 
